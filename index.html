@@ -1,10 +1,170 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta http-equiv="refresh" content="0; url=https://discord.com/invite/D7wCQV8YCr">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="refresh" content="5; url=https://discord.com/invite/D7wCQV8YCr">
     <title>Redirecting...</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Custom Styles -->
+    <style>
+        body {
+            background: linear-gradient(120deg, #4e54c8, #8f94fb);
+            font-family: 'Poppins', sans-serif;
+            color: #fff;
+            height: 100vh;
+            margin: 0;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+
+        .redirect-box {
+            text-align: center;
+            padding: 4rem;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            backdrop-filter: blur(15px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+            animation: zoomIn 1.5s ease-in-out;
+            position: relative;
+            z-index: 1;
+        }
+
+        .redirect-box h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .redirect-box p {
+            font-size: 1.2rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .redirect-box .spinner-border {
+            width: 4rem;
+            height: 4rem;
+            margin-bottom: 1rem;
+        }
+
+        .redirect-box .spinner-border span {
+            display: block;
+            margin-top: -10px;
+            font-size: 1.1rem;
+        }
+
+        .redirect-box i {
+            font-size: 4rem;
+            color: #ffcc00;
+            animation: bounce 2s infinite;
+            margin-bottom: 1rem;
+        }
+
+        .redirect-box a {
+            color: #ffcc00;
+            font-weight: 600;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .redirect-box a:hover {
+            color: #ffe066;
+        }
+
+        @keyframes zoomIn {
+            from {
+                opacity: 0;
+                transform: scale(0.7);
+            }
+
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        @keyframes bounce {
+            0%, 100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-15px);
+            }
+        }
+
+        /* Particle Animation */
+        .particle {
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            background: rgba(255, 255, 255, 0.3);
+            border-radius: 50%;
+            animation: moveParticle 15s infinite;
+            bottom: 0;
+        }
+
+        @keyframes moveParticle {
+            0% {
+                transform: translateY(0) scale(1);
+            }
+
+            50% {
+                transform: translateY(-100vh) scale(1.5);
+            }
+
+            100% {
+                transform: translateY(0) scale(1);
+            }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .redirect-box h1 {
+                font-size: 2rem;
+            }
+
+            .redirect-box p {
+                font-size: 1rem;
+            }
+
+            .redirect-box .spinner-border {
+                width: 3rem;
+                height: 3rem;
+            }
+        }
+    </style>
 </head>
+
 <body>
-    <p>If you are not redirected, <a href="https://discord.com/invite/D7wCQV8YCr">click here</a>.</p>
+    <!-- Particles for dynamic effect -->
+    <div class="particle" style="left: 10%; animation-delay: 0s;"></div>
+    <div class="particle" style="left: 30%; animation-delay: 2s;"></div>
+    <div class="particle" style="left: 50%; animation-delay: 4s;"></div>
+    <div class="particle" style="left: 70%; animation-delay: 6s;"></div>
+    <div class="particle" style="left: 90%; animation-delay: 8s;"></div>
+
+    <div class="redirect-box">
+        <i class="fab fa-discord"></i>
+        <h1>Redirecting to Discord...</h1>
+        <div class="spinner-border text-warning" role="status">
+            <span class="visually-hidden">Loading...</span>
+        </div>
+        <p>Prepare yourself! You will be redirected in a moment. If the redirect doesn't happen, <a href="https://discord.com/invite/D7wCQV8YCr">click here</a>.</p>
+    </div>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
